@@ -9,9 +9,26 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
     return Scaffold(
-      body: Text('This is Dashboard'),
+      backgroundColor:  Colors.blue[400],
+      body:  SafeArea(
+      child: Column(
+        children: [
+          ElevatedButton(
+            onPressed: (){
+              Navigator.pushNamed(context, '/menu');
+              },
+              child: Text('Go to Menu'),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              Navigator.pushNamed(context, '/profile');
+            },
+            child: Text('Go to profile'),
+          ),
+        ],
+      ),
+      ),
     );
   }
 }
