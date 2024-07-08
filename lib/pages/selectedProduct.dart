@@ -29,7 +29,7 @@ class _selectedProductState extends State<selectedProduct> {
     title:  const Text(
         'Order',
         style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontWeight:  FontWeight.bold,
       ),
       ),
