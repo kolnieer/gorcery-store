@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:untitled2/pages/selectedProduct.dart';
 import 'package:untitled2/services/product.dart';
 import 'package:untitled2/services/menuCard.dart';
 import 'package:http/http.dart' as http;
@@ -76,6 +77,14 @@ class _MenuState extends State<Menu> {
                               Text(products[index].price.toString()),
                             ],
                           ),
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => selectedProduct(product: products[index]),
+                            ),
+                            );
+                          },
                         ),
                       );
                     }
