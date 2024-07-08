@@ -17,7 +17,7 @@ class _selectedProductState extends State<selectedProduct> {
     title:  const Text(
         'Order',
         style: TextStyle(
-          color: Colors.white70,
+          color: Colors.white,
           fontWeight:  FontWeight.bold,
 
 

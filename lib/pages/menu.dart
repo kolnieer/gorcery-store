@@ -92,7 +92,7 @@ class _MenuState extends State<Menu> {
               );
             }
             return Center(
-              child: Text('Unable to load datas'),
+              child: Text('Unable to load data'),
             );
           },
         ),
