@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.orange,
       appBar: AppBar(
         title: Text('User Profile'),
-        backgroundColor:  Colors.cyan,
+        backgroundColor:  Colors.blueAccent,
         centerTitle: true,
       ),
       body: Padding(
