@@ -56,7 +56,7 @@ class _MenuState extends State<Menu> {
             if(snapshots.connectionState == ConnectionState.waiting){
             return Center(
               child: SpinKitWanderingCubes(
-                color: Colors.white70,
+                color: Colors.pink[100],
                 size: 70.0,
               ),
              );
@@ -69,6 +69,7 @@ class _MenuState extends State<Menu> {
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       return Card(
+                        color: Colors.orange,
                         child: ListTile(
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

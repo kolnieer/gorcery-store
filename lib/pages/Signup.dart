@@ -89,7 +89,7 @@ class _SignupState extends State<Signup> {
                       ),
                       validator: (value){
                         if(value == null || value.isEmpty){
-                          return 'please input your email';
+                          return 'Please input your email';
                         }
                         if(value.length < 2){
                           return 'It should be a combination of numbers and letters';
@@ -125,10 +125,10 @@ class _SignupState extends State<Signup> {
                       ),
                       validator: (value){
                         if(value == null || value.isEmpty){
-                          return 'teh hanggang 8 na letters ang password';
+                          return 'Please input your password';
                         }
                         if(value.length < 8){
-                          return 'beh go longerrrr!';
+                          return 'Maximum of 8 Characters';
                         }
                         if(value.length > 20){
                           return 'habaee naman beh';

@@ -34,57 +34,83 @@ class _selectedProductState extends State<selectedProduct> {
       ),
       ),
     ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-        Column(
-        children: [
-          Text(widget.product.productName),
-          Text(widget.product.description),
-         ],
-      ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                '₱ ${totalamount.toString()}',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                    ),
-               ),
-          Row(
-            children: [
-              IconButton(
-                onPressed: (){
-                  setState(() {
-                  if(numberOfOrders > 1){
-                    numberOfOrders -= 1;
-                    totalamount = product.price * numberOfOrders;
-                 }
-                });
-             },
-                icon: Icon(Icons.remove)
-          ),
-          Text(
-            numberOfOrders.toString(),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+          Column(
+          children: [
+            Image.network(widget.product.url),
+            SizedBox(height: 60.0,),
+            Text(widget.product.productName,
             style: TextStyle(
-              fontSize: 20.0,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
             ),
-          ),
-          IconButton(
-            onPressed: (){
-              setState(() {
-                numberOfOrders +=1;
-                totalamount = product.price * numberOfOrders;
-              });
-             },
-            icon: Icon(Icons.add),
             ),
+            SizedBox(height: 60.0,),
+            Text(widget.product.description,
+              style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),),
            ],
-          )
-        ],
         ),
-        ],
+            SizedBox(height: 70.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '₱ ${totalamount.toString()}',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                 ),
+            Row(
+              children: [
+                IconButton(
+                  onPressed: (){
+                    setState(() {
+                    if(numberOfOrders > 1){
+                      numberOfOrders -= 1;
+                      totalamount = product.price * numberOfOrders;
+                   }
+                  });
+               },
+                  icon: Icon(Icons.remove)
+            ),
+            Text(
+              numberOfOrders.toString(),
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+            IconButton(
+              onPressed: (){
+                setState(() {
+                  numberOfOrders +=1;
+                  totalamount = product.price * numberOfOrders;
+                });
+               },
+              icon: Icon(Icons.add),
+              ),
+             ],
+            )
+          ],
+          ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, '/menu');
+              },
+              child: Text('Add to Cart'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange[500],
+                foregroundColor: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

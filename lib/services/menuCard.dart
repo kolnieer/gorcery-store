@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/services/product.dart';
 
-
 class Menucard extends StatelessWidget {
   final Product product;
 
