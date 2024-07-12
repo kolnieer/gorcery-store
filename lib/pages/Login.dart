@@ -49,8 +49,16 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.grey[100],
-      body: SafeArea(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage('https://i.pinimg.com/236x/23/e7/7f/23e77fb348aaa66c285f4ac811e17ed7.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+
+
+      child: SafeArea(
         child: Padding(
           padding: EdgeInsets.fromLTRB(15.0, 50.0, 10.0, 0),
           child: Column(
@@ -151,10 +159,67 @@ class _LoginState extends State<Login> {
                         },
                         child: buttonContent,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.pinkAccent,
+                          backgroundColor: Colors.blueAccent,
                           foregroundColor: Colors.white,
                         ),
 
+                    ),
+                    Divider(
+                      height: 55.0,
+                      color: Colors.black,
+                      thickness: 1.0,
+
+                    ),
+                    SizedBox(height: 10.0),
+                    Column(
+                      children: [
+                        Text('Sign in with',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                        SizedBox(height: 40.0,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            ElevatedButton(onPressed: (){},
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children:<Widget> [
+                                    Icon(Icons.facebook),
+                                    SizedBox(width: 5.0,),
+                                    Text ('Login with Facebook',),
+                                  ],
+                                ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blueAccent,
+                                foregroundColor: Colors.black,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 10.0,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children:<Widget> [
+                        ElevatedButton(onPressed: (){},
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(Icons.g_mobiledata),
+                                SizedBox(width: 5.0,),
+                                Text('Login with Google',),
+                              ],
+                            ) ,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blueAccent,
+                                foregroundColor: Colors.black,
+                              ),
+
+                        ),
+                      ],
                     ),
                     SizedBox(height: 40.0,),
                     Row(
@@ -184,6 +249,7 @@ class _LoginState extends State<Login> {
             ],
           ),
         ),
+      ),
       ),
     );
   }

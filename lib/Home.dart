@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.orangeAccent[200],
       appBar: AppBar(
         title: Text('User Profile'),
         backgroundColor:  Colors.blueAccent,
@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                 Divider(
                   height: 70.0,
                   color: Colors.black,
-                  thickness: 10.0,
+                  thickness: 5.0,
 
                 ),
                 Row(
@@ -48,9 +48,10 @@ class _HomeState extends State<Home> {
                     Text(
                       'NAME',
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        letterSpacing: 2.0,
+                        letterSpacing: 1.5,
                       ),
                     ),
                   ],
@@ -58,9 +59,10 @@ class _HomeState extends State<Home> {
                 Text(
                   'Anne Nicole Tolentino',
                   style:  TextStyle(
+                      fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      fontSize: 25.0
+                      letterSpacing: 1.5,
                   ),
                 ),
                 SizedBox(height: 30.0,),
@@ -68,33 +70,58 @@ class _HomeState extends State<Home> {
                   'YEAR',
                   style: TextStyle(
                     fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white70,
-                    letterSpacing: 2.0,
+                    letterSpacing: 1.5,
                   ),
                 ),
                 Text(
                   '$year Year',
                   style:  TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white70,
                     fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 1.5,
                   ),
                 ),
                 SizedBox(height: 30.0,),
                 Text(
-                  'EMAIL',
+                  'EMAIL :',
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.white70,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                     letterSpacing: 2.0,
                   ),
                 ),
+                SizedBox(height: 5.0,),
                 Text(
                   'tolentinoannenicol@gmail.com',
                   style:  TextStyle(
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 25.0,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 30.0,),
+                Text(
+                  'Address :',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 1.5
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Text(
+                  'Duhatan, Balayan, Batangas',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 1.5,
                   ),
                 ),
               ],
